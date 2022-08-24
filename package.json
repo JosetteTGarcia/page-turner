@@ -1,0 +1,22 @@
+{
+  "name": "page-turner-app",
+  "version": "1.0.0",
+  "description": "app for phase 4 project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosetteTGarcia/page-turner.git"
+  },
+  "author": "Josette Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosetteTGarcia/page-turner/issues"
+  },
+  "homepage": "https://github.com/JosetteTGarcia/page-turner#readme"
+}
