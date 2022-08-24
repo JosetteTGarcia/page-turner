@@ -26,7 +26,7 @@ return (
       {user ? (
         <Routes>
           <Route path="/" element={
-            <Home setUser={setUser} />}
+            <Home user={user} />}
           />
         </Routes>
       ) : (
@@ -35,10 +35,10 @@ return (
             <SignUp setUser={setUser} />}
           />
          <Route path="/login" element={
-            <Login/>}
+            <Login setUser={setUser}/>}
           />
           <Route path="/" element={
-            <Home/>}
+            <Home user={user}/>}
           />
         </Routes>
       )}
