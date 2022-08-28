@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get 'genres', to: 'genres#index'
-  get 'books', to: 'books#index'
-  get 'mybooks', to: 'user_books#index'
+  
+  resources :mybooks, only: [:index, :show, :create]
 
+  resources :books, only: [:index, :show, :create]
+ 
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
