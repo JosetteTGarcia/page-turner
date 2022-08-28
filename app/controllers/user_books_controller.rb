@@ -4,4 +4,27 @@ class UserBooksController < ApplicationController
     userbooks = UserBook.all
     render json: userbooks
   end
+
+  def show
+    book = UserBook.find_by(id: params[:id])
+      if book
+        render json: book
+      else 
+        render json: {error: "Book not found"}, status: :not_found
+      end
+  end
+
+  def create
+    book = UserBook.create(user_books_params)
+    render json: book, status: :created
+  end
+
+
+
+  private
+  
+  def user_books_params
+    params.permit(:book_id, :user_id)
+
+  end
 end
