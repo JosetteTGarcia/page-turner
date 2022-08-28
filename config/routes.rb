@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Leave this here to help deploy your app later!
   get 'genres', to: 'genres#index'
   
-  resources :user_books, only: [:index, :show, :create]
+  resources :user_books, only: [:index, :show, :create, :update]
 
   resources :books, only: [:index, :show, :create]
  
